@@ -1,0 +1,261 @@
+body { 
+    margin: 0;
+}
+
+/* Navigation items at the top of the page */
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #000000;
+
+    padding: 6px 15px 0px 15px;
+}
+
+.nav-container-item {
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+    width: auto;
+}
+
+.nav-container-item-left {
+    display: flex;
+    align-items: center;
+
+    height: 25px;
+    width: auto;
+    
+    margin: 3px;
+    padding: 6px;
+}
+
+.nav-container-item-right {
+    display: flex;
+    align-items: center;
+
+    height: 25px;
+    width: auto;
+    
+    margin: 3px;
+    padding: 6px;
+}
+
+.nav-text-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #000000;
+}
+
+/* Main content items in the middle of the page */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#search-box {
+    height: 46px;
+    width: 484px;
+    border-radius: 40px;
+    background: ;
+    padding: 0;
+    border: 1px solid #dfe1e5;
+
+    display: flex;
+    align-items: center;
+
+    margin: 20px 0px 20px 0px;
+
+    transition: box-shadow .2s;
+}
+
+#search-box:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+#search-text {
+    border: none;
+    width: 100%;
+    background: none;
+    outline: none;
+    float: left;
+    margin: 0px 15px 0px 15px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+
+    flex-grow: 2;
+}
+
+#google-logo-image {
+    width: 272px;
+    height: 92px;
+}
+
+#microscope-image {
+    width: 21px;
+    height: 21px;
+    margin-left: 10px;
+}
+
+#microphone-image {
+    width: 19px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+#search-button-container {
+    margin: 0px 0px 15px 0px;
+}
+
+.search-button {
+    height: 36px;
+    min-width: 54px;
+    color: #5F6368;
+    border-radius: 4px;
+    margin: 11px 4px 11px 4px;
+    padding: 0px 16px 0px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-image: ;
+    border-width: 0px;
+    background: linear-gradient(#f5f5f5,#f1f1f1);
+    cursor: pointer;
+}
+
+.search-button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background: linear-gradient(#f8f8f8,#f1f1f1);
+    border: 1px solid #c6c6c6;
+    color: #222;
+}
+
+#search-language {
+    text-align: center;
+}
+
+/* Footer items at the bottom of the page */
+
+#footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: auto;
+    width: 100%;
+    background-color: #f2f2f2;
+    
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer-container-item {
+    display: flex;
+    align-items: center;
+
+    height: auto;
+    width: auto;
+    padding: 0px 15px 0px 15px;
+}
+
+#footer-container-top {
+    display: flex;
+    border-bottom: 1px solid #e4e4e4;
+    border-top: 1px solid #e4e4e4;
+}
+
+#footer-container-item-left-top {
+    margin: 5px 0px 10px 5px;
+    padding: 5px 10px 0px 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #5f6368;
+}
+
+#footer-container-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container-item-left {
+    /* background-color: lime; */
+    height: autos;
+    width: auto;
+
+    margin: 5px 0px 10px 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.footer-container-item-right {
+    /* background-color: lime; */
+    height: auto;
+    width: auto;
+
+    margin: 5px;
+    padding: 8px;
+}
+
+.footer-text-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #5f6368;
+}
+
+/* Misc items */
+
+.product-button {
+    width: 25px;
+    height: 25px;
+    object-fit: none;
+    object-position: 26.5% 95%;
+    opacity: 50%;
+}
+
+.product-button:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.user-favicon {
+    height: 35px;
+    width: 35px;
+    background-color: pink;
+    border-radius: 50%;
+    display: inline-block;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    color:white;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
