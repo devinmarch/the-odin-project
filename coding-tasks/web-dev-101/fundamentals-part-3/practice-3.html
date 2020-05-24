@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development 101 - Fundamentals Part 3 - Practice Problem 3</title>
+</head>
+<body>
+    <script>
+        //Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+        let string = prompt('Write something for me to format!');
+
+        function capitalize(string) {
+            return string[0].toUpperCase() + string.substring(1).toLowerCase();
+        }
+
+        alert(capitalize(string));
+    </script>
+</body>
+</html>
