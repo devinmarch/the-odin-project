@@ -8,12 +8,45 @@
 <body>
     <script>
 
+        const rock = 'rock';
+        const paper = 'paper';
+        const scissors = 'scissors';
+        const tie = 'Tie!';
+        const win = 'Yahoo!';
+        const lose = 'You lose!';
+        
+        let roundCount = 0;
+
         function computerPlay() {
-            let computerChoices = ['Rock', 'Paper', 'Scissors']
+            let computerChoices = ['rock', 'paper', 'scissors'];
             return computerChoices[Math.floor(Math.random() * computerChoices.length)];
         }
-        
-        alert(computerPlay());
+
+        function gameRound(playerSelection, computerSelection) {
+            if (playerSelection === computerSelection) {
+                return `${tie}`;
+            } else if (playerSelection === rock && computerSelection === scissors) {
+                return `${win} ${rock[0].toUpperCase() + rock.substring(1)} beats ${scissors[0].toUpperCase() + scissors.substring(1)}.`
+            } else if (playerSelection === paper && computerSelection === rock) {
+                return `${win} ${paper[0].toUpperCase() + paper.substring(1)} smuthers ${rock[0].toUpperCase() + rock.substring(1)}.`
+            } else if (playerSelection === scissors && computerSelection === paper) {
+                return `${win} ${scissors[0].toUpperCase() + scissors.substring(1)} cuts ${paper[0].toUpperCase() + paper.substring(1)}.`
+            } else if (playerSelection === scissors && computerSelection === rock) {
+                return `${lose} ${rock[0].toUpperCase() + rock.substring(1)} beats ${scissors[0].toUpperCase() + scissors.substring(1)}.`
+            } else if (playerSelection === rock && computerSelection === paper) {
+                return `${lose} ${paper[0].toUpperCase() + paper.substring(1)} smuthers ${rock[0].toUpperCase() + rock.substring(1)}.`
+            } else if (playerSelection === paper && computerSelection === scissors) {
+                return `${lose} ${scissors[0].toUpperCase() + scissors.substring(1)} cuts ${paper[0].toUpperCase() + paper.substring(1)}.`
+            }
+        }
+
+        do {
+            let computerSelection = computerPlay();
+            let playerSelection = prompt('Rock, Paper, or Scissors?', '').toLowerCase();
+            alert(gameRound(playerSelection, computerSelection));
+            roundCount++;
+        }
+        while (roundCount < 5);
 
     </script>
 </body>
